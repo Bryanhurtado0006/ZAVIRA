@@ -1,0 +1,116 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".configuracion.Lenny_TesInicial">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test de Bienvenida"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. ¿Cuál es la idea principal de un texto narrativo?"
+            android:textStyle="bold"/>
+        <RadioGroup android:id="@+id/pregunta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:text="Describir personajes"/>
+            <RadioButton android:text="Contar una historia"/>
+            <RadioButton android:text="Exponer hechos científicos"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. ¿Cuánto es 12 x 8?"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+        <RadioGroup android:id="@+id/pregunta2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:text="96"/>
+            <RadioButton android:text="82"/>
+            <RadioButton android:text="100"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. ¿Qué es una democracia?"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+        <RadioGroup android:id="@+id/pregunta3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:text="Gobierno de uno solo"/>
+            <RadioButton android:text="Gobierno del pueblo"/>
+            <RadioButton android:text="Gobierno militar"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. ¿Cuál es la función del sistema respiratorio?"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+        <RadioGroup android:id="@+id/pregunta4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:text="Transportar sangre"/>
+            <RadioButton android:text="Digerir alimentos"/>
+            <RadioButton android:text="Intercambiar oxígeno y dióxido de carbono"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. ¿Cuál es el significado de 'book' en inglés?"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+        <RadioGroup android:id="@+id/pregunta5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:text="Cuadro"/>
+            <RadioButton android:text="Libro"/>
+            <RadioButton android:text="Mesa"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+

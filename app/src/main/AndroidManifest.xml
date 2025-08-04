@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ICFESUP"
         tools:targetApi="31">
         <activity
+            android:name=".configuracion.Lenny_TesInicial"
+            android:exported="false" />
+        <activity
             android:name=".simulacroANA.Welcome_Test_Activity"
             android:exported="false" />
         <activity
@@ -57,9 +60,7 @@
             android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.ICFESUP" />
-
         <activity android:name=".mod_supervivencia.SupervivenciaActivity" />
-
         <activity android:name=".mod_supervivencia.BienvenidaSupervivenciaActivity" />
         <activity android:name=".Mundos.MundoDetalleActivity" />
         <activity android:name=".Mundos.matematicas.facil.FacilMatematicasActivity" />
@@ -67,11 +68,6 @@
         <activity android:name=".Mundos.sociales.facil.FacilSocialesActivity" />
         <activity android:name=".Mundos.ciencias_naturales.facil.FacilCienciasActivity" />
         <activity android:name=".Mundos.ingles.facil.FacilInglesActivity" />
-
-
-
-
-
     </application>
 
 </manifest>
