@@ -5,6 +5,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.icfes_up.Mundos.ui.lista.ListaMundosFragment;
 import com.example.icfes_up.R;
 import com.example.icfes_up.databinding.ActivityMundos2Binding;
 

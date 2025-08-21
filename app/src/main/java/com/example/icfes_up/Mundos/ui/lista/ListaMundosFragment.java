@@ -44,12 +44,15 @@ public class ListaMundosFragment extends Fragment {
         listaMundos.add(new Mundo("Republica de las Decisiones", R.drawable.mundocinco));
 
         adapter = new MundosAdapter(listaMundos, mundoSeleccionado -> {
-            // Puedes abrir aquí MundoDetalleActivity o navegar a otro fragmento con los niveles
             Intent intent = new Intent(requireContext(), MundoDetalleActivity.class);
+            // Extra: nombre del mundo
             intent.putExtra("nombre_mundo", mundoSeleccionado.getNombre());
+            // Nuevo extra: recurso de imagen
+            intent.putExtra("imagen_mundo_res", mundoSeleccionado.getImagen());
             startActivity(intent);
         });
         recyclerView.setAdapter(adapter);
+
 
         return view;
     }
