@@ -19,16 +19,18 @@
             android:contentDescription="Logo Zavira"
             android:layout_marginBottom="32dp" />
 
+        <!-- Número de Documento -->
         <EditText
             android:id="@+id/input_correo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Correo"
-            android:inputType="textEmailAddress"
+            android:hint="Número de documento"
+            android:inputType="number"
             android:padding="12dp"
             android:backgroundTint="#2196F3"
             android:layout_marginBottom="16dp" />
 
+        <!-- Contraseña -->
         <EditText
             android:id="@+id/input_contrasena"
             android:layout_width="match_parent"

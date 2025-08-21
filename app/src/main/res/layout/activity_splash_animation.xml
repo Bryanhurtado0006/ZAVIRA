@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white"
+    android:padding="24dp">
+
+    <!-- Animación Lottie -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieView"
+        android:layout_width="295dp"
+        android:layout_height="295dp"
+        android:layout_marginTop="80dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="RobotSaludando.json"/>
+
+    <!-- Mensajes -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/tvMessage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenidos a nuestra App educativa ZAVIRA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvMessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prepárate para evaluar y conocer tus habilidades de estudio con nosotros"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvMessage3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aprenderás con pruebas tipo ICFES adaptadas a tu estilo de aprendizaje"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvMessage4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Comencemos ahora!"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Botón para iniciar el test -->
+    <LinearLayout
+        android:id="@+id/containerTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnComenzarTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comenzar Test"
+            android:backgroundTint="#ADD8E6"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+</LinearLayout>

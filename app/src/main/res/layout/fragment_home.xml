@@ -261,7 +261,7 @@
                         android:id="@+id/ImgMundosgami"
                         android:layout_height="108dp"
                         android:layout_marginBottom="8dp"
-                        android:contentDescription="Configuración"
+                        android:contentDescription="MundosGamificados"
                         android:src="@drawable/pantalla5" />
 
                     <TextView

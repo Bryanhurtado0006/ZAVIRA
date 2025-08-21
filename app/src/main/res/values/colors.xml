@@ -22,14 +22,14 @@
 
     <!-- Colores personalizados -->
     <color name="colorx">#8069BF</color>
-    <color name="colorxx">#6BB9FF</color>
+    <color name="colorxx">#D0E2F2</color>
     <color name="colorxxx">#722323</color>
     <color name="red_gami">#F70C0C</color>
     <color name="button_background">#FF7043</color>
 
     <!-- Progreso y tarjetas -->
     <color name="progress_track">#E0E0E0</color>
-    <color name="card_stroke">#BDBDBD</color>
+    <color name="card_stroke">#AAD0E4</color>
 
     <!-- Colores creativos -->
     <color name="verde_lima">#77FFD600</color>

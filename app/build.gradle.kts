@@ -48,6 +48,36 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.activity)
+
+    implementation (libs.retrofit.v290)
+    implementation (libs.converter.gson.v290)
+    implementation (libs.logging.interceptor)
+
+
+        // Material Design
+        implementation (libs.material.v190)
+
+        // Lottie para animaciones
+        implementation (libs.lottie)
+
+        // CardView (ya lo usas, pero te pongo la última)
+        implementation (libs.cardview)
+
+        // ConstraintLayout (para pantallas más modernas)
+        implementation (libs.constraintlayout.v214)
+
+
+        implementation (libs.material)
+        implementation (libs.lottie.v630)
+        implementation (libs.viewpager2)
+    implementation (libs.lottie.v640)
+
+        implementation (libs.lottie.v640)
+
+
+
+
+
     implementation(libs.core.ktx)
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)

@@ -4,6 +4,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.View;
 
 import com.example.icfes_up.simulacroANA.Welcome_Test_Activity;
 import com.google.android.material.navigation.NavigationView;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    private Bundle savedInstanceState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         // Inflamos el layout con ViewBinding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // ✅ Animación al cargar el contenido principal
+        View mainContent = binding.appBarMain.getRoot();
+        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        mainContent.startAnimation(fadeIn);
 
         // Toolbar
         setSupportActionBar(binding.appBarMain.toolbar);
@@ -82,4 +91,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

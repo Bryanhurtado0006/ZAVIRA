@@ -6,8 +6,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.icfes_up.MainActivity;
+import com.example.icfes_up.R;
 import com.example.icfes_up.databinding.ActivityInicioSesionBinding;
+import com.example.icfes_up.lenny_testi.SplashAnimation;
 import com.example.icfes_up.model.DbHelper;
 
 public class Inicio_Sesion extends AppCompatActivity {
@@ -25,13 +26,11 @@ public class Inicio_Sesion extends AppCompatActivity {
         dbHelper = new DbHelper(this);
 
         binding.tvSobreNosotros.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio_Sesion.this, Sobre_Nosotros.class);
-            startActivity(intent);
+            startActivity(new Intent(Inicio_Sesion.this, Sobre_Nosotros.class));
         });
 
         binding.tvOlvidasteContrasena.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio_Sesion.this, Restablecer_Contrasena.class);
-            startActivity(intent);
+            startActivity(new Intent(Inicio_Sesion.this, Restablecer_Contrasena.class));
         });
 
         binding.btnIniciarSesion.setOnClickListener(v -> {
@@ -41,14 +40,13 @@ public class Inicio_Sesion extends AppCompatActivity {
             if (correo.isEmpty() || contrasena.isEmpty()) {
                 Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show();
             } else {
-                if (dbHelper.validarUsuario(correo, contrasena)) {
-                    Toast.makeText(this, "Inicio de sesión como Usuario", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(this, MainActivity.class));
-                    finish();
-                } else if (dbHelper.validarAdministrador(correo, contrasena)) {
-                    Toast.makeText(this, "Inicio de sesión como Administrador", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(this, MainActivity.class));
-                    finish();
+                if (dbHelper.validarUsuario(correo, contrasena) || dbHelper.validarAdministrador(correo, contrasena)) {
+                    Toast.makeText(this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
+
+                    // Abrimos SplashAnimation primero
+                    Intent intent = new Intent(Inicio_Sesion.this, SplashAnimation.class);
+                    startActivity(intent);
+                    finish(); // cerramos login
                 } else {
                     Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 }

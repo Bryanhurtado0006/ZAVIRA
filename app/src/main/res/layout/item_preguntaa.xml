@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="8dp">
+
+    <!-- Texto de la pregunta -->
+    <TextView
+        android:id="@+id/tvPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto de la pregunta"
+        android:textSize="14sp"
+        android:textColor="#0D47A1"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Opciones en horizontal -->
+    <RadioGroup
+        android:id="@+id/rgOpciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbOpcion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#0D47A1" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="#0D47A1" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="#0D47A1" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textColor="#0D47A1" />
+    </RadioGroup>
+
+</LinearLayout>

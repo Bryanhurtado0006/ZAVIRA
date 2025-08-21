@@ -18,6 +18,8 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.icfes_up.Mundos.Mundos_activity;
 
 import com.example.icfes_up.databinding.FragmentHomeBinding;
+import com.example.icfes_up.lenny_testi.TestGamificado;
+import com.example.icfes_up.lenny_testi.TestLottie;
 import com.example.icfes_up.mod_supervivencia.BienvenidaSupervivenciaActivity;
 
 public class HomeFragment extends Fragment {
@@ -41,10 +43,13 @@ public class HomeFragment extends Fragment {
 
         //mundos direccion
         binding.ImgMundosgami.setOnClickListener(v -> {
-            Intent intent = new Intent(getContext(), Mundos_activity.class);
+            Intent intent = new Intent(requireActivity(), TestLottie.class);
             startActivity(intent);
             requireActivity().overridePendingTransition(R.anim.slide_in_right_testv, R.anim.slide_out_left_testv);
         });
+
+
+
 
         //DINAMICAS Y RETOS
 
