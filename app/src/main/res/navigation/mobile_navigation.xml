@@ -123,4 +123,7 @@
         android:name="com.example.icfes_up.simulacroANA.Welcome_Test_Activity"
         android:label="activity_welcome_test"
         tools:layout="@layout/activity_welcome_test" />
+
+    <include
+        app:graph="@navigation/mundos_nav_graph" />
 </navigation>

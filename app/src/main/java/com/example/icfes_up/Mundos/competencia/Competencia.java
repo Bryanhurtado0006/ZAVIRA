@@ -1,4 +1,4 @@
-package com.example.icfes_up.Mundos;
+package com.example.icfes_up.Mundos.competencia;
 
 import java.util.List;
 

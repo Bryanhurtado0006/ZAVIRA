@@ -1,4 +1,4 @@
-package com.example.icfes_up.Mundos;
+package com.example.icfes_up.Mundos.shared.decorations;
 
 import android.graphics.Rect;
 import android.view.View;

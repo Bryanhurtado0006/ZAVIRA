@@ -1,4 +1,4 @@
-package com.example.icfes_up.Mundos;
+package com.example.icfes_up.Mundos.shared.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.icfes_up.R;
-import com.example.icfes_up.Mundos.Mundo;
+import com.example.icfes_up.Mundos.model.Mundo;
 
 import java.util.List;
 

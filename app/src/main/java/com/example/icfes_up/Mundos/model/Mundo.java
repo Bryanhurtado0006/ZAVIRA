@@ -1,4 +1,4 @@
-package com.example.icfes_up.Mundos;
+package com.example.icfes_up.Mundos.model;
 
 public class Mundo {
     private String nombre;

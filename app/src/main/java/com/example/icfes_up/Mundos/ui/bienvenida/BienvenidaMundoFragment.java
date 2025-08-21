@@ -1,4 +1,4 @@
-package com.example.icfes_up.Mundos;
+package com.example.icfes_up.Mundos.ui.bienvenida;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -75,7 +75,7 @@ public class BienvenidaMundoFragment extends Fragment {
         Button btnStart   = v.findViewById(R.id.btnEmpezar);
 
         imgFondo.setImageResource(resImagen);
-        txtTitulo.setText("Bienvenido a " + nombreMundo);
+        txtTitulo.setText("¡Tierra a la vista! llegamos a " + nombreMundo);
 
         // 2. Enviar nombreMundo al callback
         btnStart.setOnClickListener(view -> {

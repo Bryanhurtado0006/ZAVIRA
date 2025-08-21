@@ -44,7 +44,7 @@
         <activity
             android:name=".logueo.Inicio_Sesion_Usuarios"
             android:exported="false" />
-        <activity android:name=".Mundos.Mundos_activity" />
+        <activity android:name=".Mundos.ui.lista.Mundos_activity" />
         <activity
             android:name=".logueo.Inicio_Sesion"
             android:exported="true"
@@ -62,12 +62,8 @@
             android:theme="@style/Theme.ICFESUP" />
         <activity android:name=".mod_supervivencia.SupervivenciaActivity" />
         <activity android:name=".mod_supervivencia.BienvenidaSupervivenciaActivity" />
-        <activity android:name=".Mundos.MundoDetalleActivity" />
-        <activity android:name=".Mundos.matematicas.facil.FacilMatematicasActivity" />
-        <activity android:name=".Mundos.lectura_critica.facil.FacilLecturaCriticaActivity" />
-        <activity android:name=".Mundos.sociales.facil.FacilSocialesActivity" />
-        <activity android:name=".Mundos.ciencias_naturales.facil.FacilCienciasActivity" />
-        <activity android:name=".Mundos.ingles.facil.FacilInglesActivity" />
+        <activity android:name=".Mundos.ui.detalle.MundoDetalleActivity" />
+
     </application>
 
 </manifest>

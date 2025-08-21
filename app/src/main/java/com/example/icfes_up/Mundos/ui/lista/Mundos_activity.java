@@ -1,11 +1,10 @@
-package com.example.icfes_up.Mundos;
+package com.example.icfes_up.Mundos.ui.lista;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.icfes_up.Mundos.ui.lista.ListaMundosFragment;
 import com.example.icfes_up.R;
 import com.example.icfes_up.databinding.ActivityMundos2Binding;
 

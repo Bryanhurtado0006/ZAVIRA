@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Selecciona un Mundo"
+            android:text="¿Qué isla te gustaría conocer?"
             android:textSize="25sp"
             android:textStyle="bold"
             android:gravity="center"

@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Título de bienvenida -->
+        <TextView
+            android:id="@+id/txtTituloCompetencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido a …"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Descripción o dinámica sutil -->
+        <TextView
+            android:id="@+id/txtDescripcionCompetencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aquí descubrirás los subtemas clave para dominar esta competencia."
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Encabezado de subtemas -->
+        <TextView
+            android:id="@+id/txtSubtemasTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtemas"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Lista de subtemas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSubtemas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

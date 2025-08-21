@@ -13,7 +13,7 @@ import com.example.icfes_up.R;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import com.example.icfes_up.Mundos.Mundos_activity;
+import com.example.icfes_up.Mundos.ui.lista.Mundos_activity;
 
 import com.example.icfes_up.databinding.FragmentHomeBinding;
 import com.example.icfes_up.mod_supervivencia.BienvenidaSupervivenciaActivity;

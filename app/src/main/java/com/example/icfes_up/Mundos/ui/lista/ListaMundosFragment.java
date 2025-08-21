@@ -1,4 +1,4 @@
-package com.example.icfes_up.Mundos;
+package com.example.icfes_up.Mundos.ui.lista;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,10 +12,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.icfes_up.Mundos.ui.detalle.MundoDetalleActivity;
 import com.example.icfes_up.R;
-import com.example.icfes_up.Mundos.Mundo;
-import com.example.icfes_up.Mundos.MundosAdapter;
-import com.example.icfes_up.Mundos.SpacingItemDecoration;
+import com.example.icfes_up.Mundos.model.Mundo;
+import com.example.icfes_up.Mundos.shared.adapters.MundosAdapter;
+import com.example.icfes_up.Mundos.shared.decorations.SpacingItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;

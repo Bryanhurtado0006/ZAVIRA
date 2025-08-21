@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/mundos_nav_graph">
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mundos_graph"
+    app:startDestination="@id/bienvenidaMundoFragment">
+
+    <fragment
+        android:id="@+id/bienvenidaMundoFragment"
+        android:name="com.example.icfes_up.Mundos.ui.bienvenida.BienvenidaMundoFragment"
+        android:label="Bienvenida Mundo"
+        tools:layout="@layout/fragment_bienvenida_mundo">
+        <action
+            android:id="@+id/action_bienvenida_to_listaMundos"
+            app:destination="@id/listaMundosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listaMundosFragment"
+        android:name="com.example.icfes_up.Mundos.ui.lista.ListaMundosFragment"
+        android:label="Lista Mundos"
+        tools:layout="@layout/fragment_mundos_list">
+        <action
+            android:id="@+id/action_lista_to_competenciaDetail"
+            app:destination="@id/competenciaDetailFragment">
+            <argument
+                android:name="arg_competencia"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_lista_to_mundoDetalle"
+            app:destination="@id/mundoDetalleActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/competenciaDetailFragment"
+        android:name="com.example.icfes_up.Mundos.competencia.detail.CompetenciaDetailFragment"
+        android:label="Detalle Competencia"
+        tools:layout="@layout/fragment_competencia_detail">
+        <argument
+            android:name="arg_competencia"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_competenciaDetailFragment_to_subtemaDetailFragment"
+            app:destination="@id/subtemaDetailFragment">
+            <argument
+                android:name="arg_subtema"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/subtemaDetailFragment"
+        android:name="com.example.icfes_up.Mundos.competencia.detail.SubtemaDetailFragment"
+        android:label="Detalle Subtema"
+        tools:layout="@layout/fragment_subtema_detail">
+        <argument
+            android:name="arg_subtema"
+            app:argType="string" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mundoDetalleActivity"
+        android:name="com.example.icfes_up.Mundos.ui.detalle.MundoDetalleActivity"
+        android:label="Detalle Mundo"
+        tools:layout="@layout/activity_mundo_detalle" />
 
 </navigation>

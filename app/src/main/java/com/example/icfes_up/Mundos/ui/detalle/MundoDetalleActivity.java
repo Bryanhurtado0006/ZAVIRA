@@ -1,10 +1,12 @@
-package com.example.icfes_up.Mundos;
+package com.example.icfes_up.Mundos.ui.detalle;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.icfes_up.Mundos.competencia.detail.CompetenciaDetailFragment;
+import com.example.icfes_up.Mundos.ui.bienvenida.BienvenidaMundoFragment;
 import com.example.icfes_up.R;
 import com.google.android.material.appbar.MaterialToolbar;
 
