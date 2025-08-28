@@ -41,11 +41,19 @@ public class Inicio_Sesion extends AppCompatActivity {
             String documento = etDocumento.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
 
-            if(documento.isEmpty() || password.isEmpty()){
-                Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show();
+            if(documento.isEmpty()){
+                etDocumento.setError("Ingresa tu número de documento");
+                etDocumento.requestFocus();
                 return;
             }
 
+            if(password.isEmpty()){
+                etPassword.setError("Ingresa tu contraseña");
+                etPassword.requestFocus();
+                return;
+            }
+
+            // Llamada a la API
             loginUser(documento, password);
         });
     }
@@ -62,22 +70,21 @@ public class Inicio_Sesion extends AppCompatActivity {
                 if(response.isSuccessful() && response.body() != null){
                     String token = response.body().getToken();
 
-                    if(token == null || token.isEmpty()){
-                        Toast.makeText(Inicio_Sesion.this, "Token no recibido", Toast.LENGTH_SHORT).show();
+                    if(token != null && !token.isEmpty()){
+                        // Guardar token
+                        SharedPreferences prefs = getSharedPreferences("icfes_prefs", MODE_PRIVATE);
+                        prefs.edit().putString("token", token).apply();
+
+                        // Mensaje de login exitoso
+                        Toast.makeText(Inicio_Sesion.this, "Login exitoso", Toast.LENGTH_SHORT).show();
+
+                        // Abrir siguiente pantalla
+                        startActivity(new Intent(Inicio_Sesion.this, ListaEstudiantesActivity.class));
+                        finish(); // Cierra login para que no se pueda regresar
+                    } else {
+                        Toast.makeText(Inicio_Sesion.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
                         Log.e(TAG, "Token vacío en la respuesta");
-                        return;
                     }
-
-                    // Guardar token en SharedPreferences
-                    SharedPreferences prefs = getSharedPreferences("icfes_prefs", MODE_PRIVATE);
-                    prefs.edit().putString("token", token).apply();
-
-                    // Mostrar mensaje de login exitoso
-                    Toast.makeText(Inicio_Sesion.this, "Login exitoso", Toast.LENGTH_SHORT).show();
-
-                    // Abrir ListaEstudiantesActivity
-                    startActivity(new Intent(Inicio_Sesion.this, ListaEstudiantesActivity.class));
-                    finish(); // cierra Inicio_Sesion para que no vuelva al login
                 } else {
                     Toast.makeText(Inicio_Sesion.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
                     Log.e(TAG, "Error login: " + response.code() + " - " + response.message());
