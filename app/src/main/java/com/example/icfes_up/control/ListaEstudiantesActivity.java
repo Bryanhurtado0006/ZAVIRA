@@ -32,7 +32,7 @@ public class ListaEstudiantesActivity extends AppCompatActivity {
 
         // Consumir API y mostrar estudiantes
         ApiService apiService = ApiClient.getClient(this).create(ApiService.class);
-        apiService.getEstudiantes().enqueue(new Callback<List<Usuario>>() {
+        apiService.perfilEstudiante().enqueue(new Callback<List<Usuario>>() {
             @Override
             public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
                 if(response.isSuccessful() && response.body() != null){
