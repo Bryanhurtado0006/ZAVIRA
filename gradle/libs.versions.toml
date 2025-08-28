@@ -1,9 +1,11 @@
 [versions]
 agp = "8.10.0"
 airbnbLottie = "6.4.0"
+bcrypt = "0.9.0"
 cardview = "1.0.0"
 constraintlayoutVersion = "2.1.4"
 converterGson = "2.9.0"
+jbcrypt = "0.4"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -29,10 +31,12 @@ retrofitVersion = "2.0.2"
 viewpager2 = "1.1.0"
 
 [libraries]
+bcrypt = { module = "at.favre.lib:bcrypt", version.ref = "bcrypt" }
 cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
 constraintlayout-v214 = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayoutVersion" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitVersion" }
 converter-gson-v290 = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+jbcrypt = { module = "org.mindrot:jbcrypt", version.ref = "jbcrypt" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

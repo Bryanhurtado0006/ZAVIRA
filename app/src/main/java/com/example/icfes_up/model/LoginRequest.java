@@ -1,28 +1,14 @@
 package com.example.icfes_up.model;
 
 public class LoginRequest {
+    private String numeroDocumento;  // ⚠ debe coincidir con backend
+    private String password;
 
-    private String documento;
-    private String contrasena;
-
-    public LoginRequest(String documento, String contrasena) {
-        this.documento = documento;
-        this.contrasena = contrasena;
+    public LoginRequest(String numeroDocumento, String password) {
+        this.numeroDocumento = numeroDocumento;
+        this.password = password;
     }
 
-    public String getDocumento() {
-        return documento;
-    }
-
-    public void setDocumento(String documento) {
-        this.documento = documento;
-    }
-
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-    }
+    public String getNumeroDocumento() { return numeroDocumento; }
+    public String getPassword() { return password; }
 }
