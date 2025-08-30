@@ -1,19 +1,19 @@
 package com.example.icfes_up.interfaces;
 
 import com.example.icfes_up.model.LoginRequest;
-import com.example.icfes_up.model.UsuarioResponse;
-import com.example.icfes_up.model.PerfilResponse;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-
+import retrofit2.http.Header;
 public interface ApiService {
 
-    @POST("/loginEstudiante")
+    // Login devuelve UsuarioResponse
+    @POST("loginEstudiante")
     Call<UsuarioResponse> loginEstudiante(@Body LoginRequest request);
 
+    // Perfil devuelve PerfilResponse
     @GET("/perfilEstudiante")
-    Call<PerfilResponse> perfilEstudiante();  // ✅ corregido
+    Call<PerfilResponse> perfilEstudiante(@Header("Authorization") String token);
+
 }
